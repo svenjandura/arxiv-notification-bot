@@ -1,0 +1,32 @@
+# query used to search the arXiv. Format is documented here: 
+# https://arxiv.org/help/api/user-manual#query_details
+arxiv_query:    'ti: "Black Hole" 
+             OR abs: "Black Hole"
+             OR aut: Hawking'
+
+#Whether to also notify if a previously found paper has been updated
+notify_on_updated_papers: True
+
+# The bot searches for papers that where updated since search_days_before_last_query
+# days before the script was last run.
+search_days_before_last_query: 5
+             
+# Whether to write the found results to a file
+write_results_to_file: True
+
+# Textfile to which the found results are appended
+results_filename: /global/path/to/results/file/results.txt
+
+# Whether to send the found results as an email
+send_results_as_email: True
+
+# The smtp server from which the emails are sent
+smtp_server: smtp.gmail.com
+
+# Login and Password
+smtp_login: [Your SMTP login (e.g. email adress)]
+smtp_pwd: [Your password]
+
+# Email adresses from which and to which the email is sent
+from_email: [Email adress from which notifications should be sent]
+to_email: [Email adress to which notfications should be sent]
